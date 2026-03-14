@@ -2,7 +2,7 @@ Summary:	Hyphenation library to use converted TeX hyphenation patterns
 Summary(pl.UTF-8):	Biblioteka przenoszenia słów używająca przekonwertowanych wzorców TeXa
 Name:		hyphen
 Version:	2.8.8
-Release:	2
+Release:	3
 License:	GPL v2+ or LGPL v2.1+ or MPL 1.1+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/hunspell/%{name}-%{version}.tar.gz
