@@ -1,13 +1,14 @@
 Summary:	Hyphenation library to use converted TeX hyphenation patterns
 Summary(pl.UTF-8):	Biblioteka przenoszenia słów używająca przekonwertowanych wzorców TeXa
 Name:		hyphen
-Version:	2.8.8
-Release:	3
+Version:	2.8.9
+Release:	1
 License:	GPL v2+ or LGPL v2.1+ or MPL 1.1+
 Group:		Libraries
-Source0:	http://downloads.sourceforge.net/hunspell/%{name}-%{version}.tar.gz
-# Source0-md5:	5ade6ae2a99bc1e9e57031ca88d36dad
-URL:		http://lingucomponent.openoffice.org/
+#Source0Download: https://github.com/hunspell/hyphen/releases
+Source0:	https://github.com/hunspell/hyphen/releases/download/v%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	442b985e604f8143a5a0e7bacd6b2e40
+URL:		https://hunspell.github.io/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -66,14 +67,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog NEWS README* THANKS TODO doc/tb87nemeth.pdf
 %attr(755,root,root) %{_bindir}/substrings.pl
-%attr(755,root,root) %{_libdir}/libhyphen.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libhyphen.so.0
+%{_libdir}/libhyphen.so.*.*.*
+%ghost %{_libdir}/libhyphen.so.0
 %dir %{_datadir}/hyphen
 %{_datadir}/hyphen/hyph_en_US.dic
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libhyphen.so
+%{_libdir}/libhyphen.so
 %{_libdir}/libhyphen.la
 %{_includedir}/hyphen.h
 
